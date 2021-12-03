@@ -4,6 +4,11 @@
 	<li>{{ 17 + 4 }}</li>
 	<li>{{ title }}</li>
 	<li>{{ value }}</li>
+	<li>{{ value | uppercase }}</li>
+	<li>{{ value | uppercase | lowercase }}</li>
+	<li>{{ numericValue | number:'0.5' }}</li>
+	<li>{{ numericValue | percent }}</li>
+	<li>{{ numericValue | currency }}</li>
 </ul>
 
 <div [style.backgroundColor]="color">Test</div>

@@ -12,6 +12,8 @@ export class AppComponent {
 
 	color = 'goldenrod';
 
+	numericValue = 5;
+
 	public onClick(event: MouseEvent): void {
 		alert(`screen position: ${event.screenX},${event.screenY}`);
 	}
