@@ -8,6 +8,6 @@
 
 <div [style.backgroundColor]="color">Test</div>
 
-<button (click)="onClick()" (mousemove)="onMouseMove()">Click me.</button>
+<button (click)="onClick($event)" (mousemove)="onMouseMove($event)">Click me.</button>
 
 <router-outlet></router-outlet>

@@ -12,11 +12,11 @@ export class AppComponent {
 
 	color = 'goldenrod';
 
-	public onClick(): void {
-		alert('Hello');
+	public onClick(event: MouseEvent): void {
+		alert(`screen position: ${event.screenX},${event.screenY}`);
 	}
 
-	public onMouseMove(): void {
-		console.log('Mouse moved!');
+	public onMouseMove(event: MouseEvent): void {
+		console.log(`client position: ${event.clientX},${event.clientY}`);
 	}
 }
