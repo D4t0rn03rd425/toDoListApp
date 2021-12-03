@@ -9,4 +9,6 @@ export class AppComponent {
 	title = 'toDoListApp';
 
 	public value = 'Hello!';
+
+	color = 'goldenrod';
 }
