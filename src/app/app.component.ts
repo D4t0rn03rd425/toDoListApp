@@ -11,4 +11,12 @@ export class AppComponent {
 	public value = 'Hello!';
 
 	color = 'goldenrod';
+
+	public onClick(): void {
+		alert('Hello');
+	}
+
+	public onMouseMove(): void {
+		console.log('Mouse moved!');
+	}
 }
