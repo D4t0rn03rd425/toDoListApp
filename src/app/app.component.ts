@@ -1,5 +1,6 @@
 import { TodoService } from './todo.service'
 import { Component } from '@angular/core';
+import { Todo } from './todo';
 
 @Component({
 	selector: 'app-root',
@@ -19,10 +20,12 @@ export class AppComponent {
 
 	myTodo = { name: "Wash clothes", done: false, id: 3 }
 
-	todos = this.todoService.getAll();
+	todos: Todo[] = [];
 
 	constructor(private todoService: TodoService) {
 		console.log(todoService.getAll());
+		todoService.getAll()
+			.subscribe(todos => this.todos = todos);
 	}
 
 	public onClick(event: MouseEvent): void {
