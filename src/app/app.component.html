@@ -7,16 +7,18 @@
 	<li>{{ value | uppercase }}</li>
 	<li>{{ value | uppercase | lowercase }}</li>
 	<li>{{ value | uppercase | lowercase | yell }}</li>
-	<li>{{ value | uppercase | lowercase | yell:'???'}}</li>
-	<li>{{ numericValue | number:'0.5' }}</li>
+	<li>{{ value | uppercase | lowercase | yell: "???" }}</li>
+	<li>{{ numericValue | number: "0.5" }}</li>
 	<li>{{ numericValue | percent }}</li>
 	<li>{{ numericValue | currency }}</li>
 </ul>
 
 <div [style.backgroundColor]="color">Test</div>
 
-<button (click)="onClick($event)" (mousemove)="onMouseMove($event)">Click me.</button>
+<button (click)="onClick($event)" (mousemove)="onMouseMove($event)">
+	Click me.
+</button>
 
-<app-todo></app-todo>
+<app-todo [todo]="myTodo"></app-todo>
 
 <router-outlet></router-outlet>

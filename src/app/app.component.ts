@@ -14,6 +14,8 @@ export class AppComponent {
 
 	numericValue = 5;
 
+	myTodo = { name: "Wash clothes", done: false, id: 3 }
+
 	public onClick(event: MouseEvent): void {
 		alert(`screen position: ${event.screenX},${event.screenY}`);
 	}
