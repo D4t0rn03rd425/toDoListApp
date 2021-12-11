@@ -1,3 +1,4 @@
+import { TodoService } from './todo.service'
 import { Component } from '@angular/core';
 
 @Component({
@@ -15,6 +16,10 @@ export class AppComponent {
 	numericValue = 5;
 
 	myTodo = { name: "Wash clothes", done: false, id: 3 }
+
+	constructor(todoService: TodoService) {
+		console.log(todoService.getAll());
+	}
 
 	public onClick(event: MouseEvent): void {
 		alert(`screen position: ${event.screenX},${event.screenY}`);
