@@ -19,7 +19,9 @@ export class AppComponent {
 
 	myTodo = { name: "Wash clothes", done: false, id: 3 }
 
-	constructor(todoService: TodoService) {
+	todos = this.todoService.getAll();
+
+	constructor(private todoService: TodoService) {
 		console.log(todoService.getAll());
 	}
 

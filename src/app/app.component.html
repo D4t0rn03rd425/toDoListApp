@@ -1,7 +1,9 @@
 <button (click)="show = !show">Toggle</button>
-<div *ngIf="show">
-	I'm visible!
-</div>
+<div *ngIf="show">I'm visible!</div>
+
+<ul>
+	<li *ngFor="let todo of todos">{{ todo.name }}</li>
+</ul>
 
 <ul>
 	<li>{{ "hallo" }}</li>
