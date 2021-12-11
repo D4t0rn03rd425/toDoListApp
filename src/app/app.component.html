@@ -19,6 +19,6 @@
 	Click me.
 </button>
 
-<app-todo [todo]="myTodo"></app-todo>
+<app-todo [todo]="myTodo" (done)="onDone($event)"></app-todo>
 
 <router-outlet></router-outlet>

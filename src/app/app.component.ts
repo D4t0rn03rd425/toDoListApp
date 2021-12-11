@@ -23,4 +23,8 @@ export class AppComponent {
 	public onMouseMove(event: MouseEvent): void {
 		console.log(`client position: ${event.clientX},${event.clientY}`);
 	}
+
+	onDone(event: any) {
+		console.log(event);
+	}
 }
