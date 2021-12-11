@@ -15,6 +15,8 @@ export class AppComponent {
 
 	numericValue = 5;
 
+	show = true;
+
 	myTodo = { name: "Wash clothes", done: false, id: 3 }
 
 	constructor(todoService: TodoService) {
