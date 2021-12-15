@@ -47,4 +47,8 @@ export class AppComponent {
 		this.todoService.getAll()
 			.subscribe(todos => this.todos = todos);
 	}
+
+	addTodo(name: string) {
+		this.todoService.create({ name, done: false }).subscribe(() => this.requestTodos());
+	}
 }
