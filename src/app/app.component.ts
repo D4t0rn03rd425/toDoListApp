@@ -1,6 +1,7 @@
 import { TodoService } from './todo.service'
 import { Component } from '@angular/core';
 import { Todo } from './todo';
+import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
 	selector: 'app-root',
@@ -22,10 +23,8 @@ export class AppComponent {
 
 	todos: Todo[] = [];
 
-	constructor(private todoService: TodoService) {
-		console.log(todoService.getAll());
-		todoService.getAll()
-			.subscribe(todos => this.todos = todos);
+	constructor(private todoService: TodoService, private authService: AuthService) {
+
 	}
 
 	public onClick(event: MouseEvent): void {
@@ -38,5 +37,14 @@ export class AppComponent {
 
 	onDone(event: any) {
 		console.log(event);
+	}
+
+	login() {
+		this.authService.loginWithRedirect();
+	}
+
+	requestTodos() {
+		this.todoService.getAll()
+			.subscribe(todos => this.todos = todos);
 	}
 }
